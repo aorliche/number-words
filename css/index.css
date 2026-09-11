@@ -1,0 +1,84 @@
+@font-face {
+	font-family: "HunimalSansv1.5";
+	src: url('/font/HunimalSansv1.5.ttf');
+}
+
+#container {
+	font-family: "HunimalSansv1.5";
+}
+
+#word {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.letter {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	padding: 3px;
+	margin: 5px;
+	border: 2px solid #aaf;
+	text-align: center;
+	vertical-align: top;
+	font-size: 24px;
+	/* create a positioned ancestor for .hint */
+	position: relative; 
+}
+
+.hint {
+	position: absolute;
+	display: inline-block;
+	text-align: center;
+	font-size: 12px;
+	width: 180px;
+	top: 55px;
+	left: -68px;
+}
+
+.new-word-div {
+	width: 100%;
+	text-align: center;
+}
+
+.new-word-button {
+	box-shadow: none;
+	background-color: #ddf;
+	border-color: #aaf;
+	border-radius: 10px;
+	font-size: 32px;
+	margin: 10px;
+}
+
+.new-word-button:hover {
+	cursor: pointer;
+	background-color: #aaf;
+	color: white;
+}
+
+#choices {
+	display: inline-block;
+	width: 150px;
+	margin-right: 60px;
+}
+
+.choice {
+	display: inline-block;
+	width: 150px;
+	border: 2px solid #aaf;
+	padding: 5px;
+	margin: 2px;
+	text-align: center;
+	border-radius: 10px;
+}
+
+.highlight {
+	color: white;
+	background-color: #aaf;
+}
+
+.wrong {
+	color: white;
+	background-color: #f33;
+	border-color: #f33;
+}
