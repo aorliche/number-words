@@ -32,6 +32,16 @@ function makeEvens() {
 	return makeOddsOrEvens(0);
 }
 
+function makeMultiples(m) {
+	const arr = [m];
+	let val = m;
+	while (val < 52) {
+		arr.push(val);
+		val += m;
+	}
+	return arr;
+}
+
 const fibonacci = [1,2,3,5,8,13,21,34,55,89];
 const squares = [1,4,9,16,25,36,49,64,81];
 const cubes = [1,8,27,64];
@@ -40,6 +50,13 @@ const tetrahedral = [1,4,10,20,35,56];
 const odds = makeOdds();
 const evens = makeEvens();
 const primes = [2,3,5,7,11,13,17,19,23,29,31,37,41,43,47];
+const threes = makeMultiples(3);
+const fours = makeMultiples(4);
+const fives = makeMultiples(5);
+const sixes = makeMultiples(6);
+const sevens = makeMultiples(7);
+const eights = makeMultiples(8);
+const nines = makeMultiples(9);
 
 const numbersBook = [
 	['fibonacci number', fibonacci],
@@ -50,6 +67,10 @@ const numbersBook = [
 	['odd number', odds],
 	['even number', evens],
 	['prime number', primes],
+	['multiple of three', threes],
+	['multiple of four', fours],
+	['multiple of fives', fives],
+	['multiple of sixes', sixes],
 ];
 
 function randArrElt(arr) {
