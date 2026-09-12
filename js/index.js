@@ -153,6 +153,8 @@ function nextLetter() {
 
 function beginNewWord() {
 	$('#word').innerHTML = '';
+	$('#definition').innerHTML = '';
+	// Get word
 	word = randArrElt(words);
 	letters = [];
 	for (let i=0; i<word.length; i++) {
@@ -161,6 +163,14 @@ function beginNewWord() {
 		letters.push(letterDiv);
 		$('#word').appendChild(letterDiv);
 	}
+	// Get definition
+	fetch('https://freedictionaryapi.com/api/v1/entries/en/' + word)
+	.then(resp => resp.json())
+	.then(json => {
+		$('#definition').innerText = 'Definition: ' + json.entries[0].senses[0].definition;
+	})
+	.catch(err => console.log(err));
+	// Start game
 	nextLetter();
 }
 

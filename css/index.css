@@ -36,6 +36,11 @@
 	left: -68px;
 }
 
+#definition {
+	font-size: 18px;
+	margin-left: 20px;
+}
+
 .new-word-div {
 	width: 100%;
 	text-align: center;

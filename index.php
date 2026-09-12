@@ -7,6 +7,7 @@
 </head>
 <body>
 	<div id='container'>
+		<p id='definition'></p>
 		<div id='choices'></div>
 		<div id='word'></div>
 	</div>
